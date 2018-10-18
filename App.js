@@ -13,11 +13,34 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+       <View style={{
+        flex: 1,
+        width: 500,
+        height: 1000,
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'space-between',
+      }}>
+        <View style={{
+          flex: 1,
+          width: 100,
+          height: 400,
+        }} />
+        <View style={{
+          flex: 3,
+          width: 300,
+          height: 600,
+        }} ><SectionList sections={[ {title: 'D', data: ['Doug','Derek','Dangerous','Dogs']}, {title: 'E', data: ['Erick','Elephant','Everywhere']}, {title: 'Artists', data: ['Salvador Dali','Rembrandt','im sure some other dudes too']},
+      ]}  renderItem= {({item}) => <Text style={styles.item}>{item}</Text>} 
+      renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>} 
+      keyExtractor={(item, index) => index} /></View>
+        <View style={{
+          flex: 1,
+          width: 100,
+          height: 100,
+        }} />
+      </View>
       <ScrollView>
-        <SectionList sections={[ {title: 'D', data: ['Doug','Derek','Dangerous','Dogs']}, {title: 'E', data: ['Erick','Elephant','Everywhere']}, {title: 'Artists', data: ['Salvador Dali','Rembrandt','im sure some other dudes too']},
-        ]}  renderItem= {({item}) => <Text style={styles.item}>{item}</Text>} 
-        renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>} 
-        keyExtractor={(item, index) => index} />
         <PizzaTranslator />
         <View style={styles.theButton}>
         <Button
@@ -39,8 +62,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   text: {
     fontSize: 100,
