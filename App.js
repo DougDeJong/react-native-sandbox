@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Alert, Button, TextInput, ScrollView } from 'react-native';
 import { white } from 'ansi-colors';
 import { AppRegistry } from 'react-native';
 import HelloWorld from './src/components/HelloWorld';
@@ -13,8 +13,19 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      <ScrollView>
         <PizzaTranslator />
+        <View style={styles.theButton}>
+        <Button
+        backgroundColor='green'
+  onPress={() => {
+    Alert.alert('You tapped the button!');
+  }}
+  title="Press Me"
+/>
+        </View>
 
+      </ScrollView>
       </View>
 
     );
@@ -23,12 +34,16 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'limegreen',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
     fontSize: 100,
     color: 'white',
+  },
+  theButton: {
+    color: 'red',
+
   }
 });
