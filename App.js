@@ -34,8 +34,8 @@ export default class App extends React.Component {
         
       </View>
       </ScrollView>
-        <Draggable renderShape="circle" renderColor="pink" offsetX={20} renderText="FunShape" reverse={false} pressDrag={() => {Alert.alert('touched!!')}} />
-        <Draggable renderShape="square" renderColor="yellow" renderText="FunShape" reverse={false} pressDrag={()=> {Alert.alert('same!')}}/>
+        <Draggable renderShape="circle" renderColor="green" offsetX={20} renderText="Regular Shape" reverse={false} pressDrag={() => {Alert.alert('We have decided that you are the user!')}} />
+        <Draggable renderShape="square" renderColor="black" renderText="Boring Shape" reverse={false} pressDrag={()=> {Alert.alert('You are the user!')}}/>
         </View>
         </View>
 
