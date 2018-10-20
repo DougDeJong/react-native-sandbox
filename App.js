@@ -30,6 +30,12 @@ export default class App extends React.Component {
         }}
         title="Press Me"/>
 
+        <Button
+        onPress={() => {
+          Alert.alert('Second Button -> Works Well')
+        }}
+        title="Checking to See how buttons are rendered in the DOM"/>
+
 
         
       </View>
