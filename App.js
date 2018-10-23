@@ -15,7 +15,7 @@ export default class App extends React.Component {
       <View>
       <View style={styles.container}>
       <ScrollView>
-        <SectionList sections={[ {title: 'D', data: ['Doug','Derek','Dangerous','Dogs']}, {title: 'E', data: ['Erick','Elephant','Everywhere']}, {title: 'Artists', data: ['Salvador Dali','Rembrandt','im sure some other dudes too']},
+        <SectionList sections={[ {title: 'First Table', data: ['Doug','Derek','Dangerous','Dogs']}, {title: 'Second Table', data: ['Erick','Elephant','Everywhere']}, {title: 'Artists', data: ['Salvador Dali','Rembrandt','im sure some other dudes too']},
       ]}  renderItem= {({item}) => <Text style={styles.item}>{item}</Text>} 
       renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>} 
       keyExtractor={(item, index) => index} />
@@ -51,7 +51,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'limegreen',
+    backgroundColor: 'purple',
   },
   text: {
     fontSize: 100,
